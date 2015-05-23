@@ -1,0 +1,65 @@
+{
+	"background":
+	{
+		"scripts":
+		[
+			"background.js"
+		]
+	},
+
+	"browser_action":
+	{
+		"default_icon":
+		{
+			"19": "mustache.png",
+			"38": "mustache.png"
+		},
+
+		"default_popup": "popup.html"
+	},
+
+	"content_scripts":
+	[
+		{
+			"css":
+			[
+				"content.css"
+			],
+
+			"js":
+			[
+				"content.js"
+			],
+
+			"matches":
+			[
+				"*://*/*"
+			],
+
+			"run_at": "document_end"
+		}
+	],
+
+	"description": "Personal Assistant",
+
+	"icons":
+	{
+		"16": "mustache.png",
+		"48": "mustache.png",
+		"128": "mustache.png"
+	},
+
+	"manifest_version": 2,
+
+	"name": "Adjutant",
+
+	"options_page": "options.html",
+
+	"permissions":
+	[
+		"*://*/*"
+		
+	],
+
+	"version": "1"
+}
